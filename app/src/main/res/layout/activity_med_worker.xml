@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vain_logo"
+    tools:context=".ActivityMedWorker">
+
+    <Button
+        android:id="@+id/buttonPacients"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="184dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="124dp"
+        android:text="Pacients"
+        app:backgroundTint="#CF3A3A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/buttonAboutWorker"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="184dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="12dp"
+        android:text="About"
+        app:backgroundTint="#CF3A3A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalendar" />
+
+    <Button
+        android:id="@+id/buttonCalendar"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="184dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="16dp"
+        android:text="Calendar"
+        app:backgroundTint="#CF3A3A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPacients" />
+
+    <Button
+        android:id="@+id/buttonBack1"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="184dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="16dp"
+        android:text="Back"
+        app:backgroundTint="#CF3A3A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAboutWorker" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="147dp"
+        android:layout_height="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/vain_logo_transp"
+        tools:srcCompat="@drawable/vain_logo_transp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.medproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedProject">
+        <activity android:name=".ActivityPatientsAppointmentReg"></activity>
+        <activity android:name=".ActivityPatientsAppointments" />
+        <activity android:name=".ActivitySingUp" />
+        <activity android:name=".ActivityPatientsAppointment" />
+        <activity android:name=".ActivityPatients" />
+        <activity android:name=".ActivityAbout" />
+        <activity android:name=".ActivityWorkerCalendar" />
+        <activity android:name=".ActivityWorkerPatients" />
+        <activity android:name=".ActivityMedWorker" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
