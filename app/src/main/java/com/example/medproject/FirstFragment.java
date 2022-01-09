@@ -1,5 +1,6 @@
 package com.example.medproject;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,17 @@ public class FirstFragment extends Fragment {
         this.fullName = view.findViewById(R.id.textView5);
         this.imageView1 = view.findViewById(R.id.imageView1);
         this.buttonDoctor = view.findViewById(R.id.button);
+
+        buttonDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
+                adb.setTitle("ALERT");
+                adb.setMessage(employee.getFullName()+" has been clicked");
+                adb.create().show();
+            }
+        });
+
         return view;
         
     }
