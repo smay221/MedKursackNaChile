@@ -7,21 +7,22 @@
     android:scrollbarThumbHorizontal="@drawable/vain_logo" >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="286dp"
-        android:layout_height="254dp"
+        android:layout_width="289dp"
+        android:layout_height="334dp"
         android:background="#DC3232"
         android:fadeScrollbars="true"
         app:cardCornerRadius="60dp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
+        app:layout_constraintVertical_bias="0.431">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="255dp"
+            android:layout_width="299dp"
+            android:layout_height="335dp"
             android:background="#CD3535"
             android:scrollbarThumbHorizontal="@drawable/vain_logo"
             tools:layout_editor_absoluteX="-29dp"
@@ -95,17 +96,38 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView1"
                 app:layout_constraintTop_toBottomOf="@+id/textView_fullName" />
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:layout_editor_absoluteX="-61dp"
-                tools:layout_editor_absoluteY="-16dp">
+            <RadioGroup
+                android:layout_width="288dp"
+                android:layout_height="124dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical" />
-            </HorizontalScrollView>
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="12:00  - 13:00" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="13:00  - 14:00" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="15:00  - 16:00" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="17:00  - 18:00" />
+            </RadioGroup>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

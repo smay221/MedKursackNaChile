@@ -88,4 +88,13 @@ public class DBClass extends SQLiteOpenHelper {
         Cursor cursor = medDB.rawQuery("Select * from USERS", new  String[] {resultLogin});
         return resultLogin;
     }
+
+    public void insertTime(String doctorPick, String reasonTime){
+        SQLiteDatabase medDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("doctorPick", doctorPick);
+        contentValues.put("reasonTime", reasonTime);
+        Log.i(TAG, doctorPick + reasonTime);
+        long ins = medDB.insert("PACIENTS", null, contentValues);
+    }
 }

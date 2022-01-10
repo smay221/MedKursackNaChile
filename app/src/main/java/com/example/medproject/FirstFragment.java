@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,12 @@ public class FirstFragment extends Fragment {
     private ImageView imageView1;
     private static int counter = 0;
     private Button buttonDoctor;
+    private RadioButton radioButton;
+    private RadioButton radioButton2;
+    private RadioButton radioButton3;
+    private RadioButton radioButton4;
+    private static final String TAG = "medproject";
+
 
     public FirstFragment() {
 
@@ -31,8 +38,11 @@ public class FirstFragment extends Fragment {
         this.employee = employee;
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        DBClass dbClass = new DBClass(getContext());
+
         View view = (ViewGroup) inflater.inflate(
                 R.layout.fragment_first, container, false);
         counter++;
@@ -46,13 +56,36 @@ public class FirstFragment extends Fragment {
         this.fullName = view.findViewById(R.id.textView5);
         this.imageView1 = view.findViewById(R.id.imageView1);
         this.buttonDoctor = view.findViewById(R.id.button);
+        this.radioButton = view.findViewById(R.id.radioButton8);
+        this.radioButton2 = view.findViewById(R.id.radioButton5);
+        this.radioButton3 = view.findViewById(R.id.radioButton6);
+        this.radioButton4 = view.findViewById(R.id.radioButton7);
+
 
         buttonDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder adb=new AlertDialog.Builder(getContext());
-                adb.setTitle("ALERT");
-                adb.setMessage(employee.getFullName()+" has been clicked");
+                adb.setTitle("Appointment");
+                if (radioButton.isChecked()){
+                    adb.setMessage("You made an appointment with a doctor " + employee.getFullName() + ". The appointment with the doctor is scheduled for " + radioButton.getText());
+                    dbClass.insertTime(employee.getFullName(), radioButton.getText().toString());
+                }
+                adb.create().show();
+                if (radioButton2.isChecked()){
+                    adb.setMessage("You made an appointment with a doctor " + employee.getFullName() + ". The appointment with the doctor is scheduled for " + radioButton2.getText());
+                    dbClass.insertTime(employee.getFullName(), radioButton2.getText().toString());
+                }
+                adb.create().show();
+                if (radioButton3.isChecked()){
+                    adb.setMessage("You made an appointment with a doctor " + employee.getFullName() + ". The appointment with the doctor is scheduled for " + radioButton3.getText());
+                    dbClass.insertTime(employee.getFullName(), radioButton3.getText().toString());
+                }
+                adb.create().show();
+                if (radioButton4.isChecked()){
+                    adb.setMessage("You made an appointment with a doctor " + employee.getFullName() + ". The appointment with the doctor is scheduled for " + radioButton4.getText());
+                    dbClass.insertTime(employee.getFullName(), radioButton4.getText().toString());
+                }
                 adb.create().show();
             }
         });
